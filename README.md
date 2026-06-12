@@ -60,12 +60,14 @@ Este é um sistema simples e completo para gerenciamento de quartos e reservas d
    DATABASE_URL="mysql://root@localhost:3306/mydb"
    ```
 4. Sincronize o banco de dados utilizando as definições do Prisma:
-   * Migrate: ```bash
+   * Migrate:
+        ```bash
         npx prisma migrate dev
-   ```
-   * Generate: ```bash
+        ```
+   * Generate:
+        ```bash
         npx prisma generate
-   ```
+        ```
   
 5. Inicie o servidor de desenvolvimento:
    ```bash
