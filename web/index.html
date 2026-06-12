@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Hotel Reservas</div>
+        <ul class="menu">
+            <li><a href="index.html" class="ativo">Quartos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+    </aside>
+
+    <main class="conteudo">
+        <div class="topo">
+            <div>
+                <h1>Quartos Cadastrados</h1>
+                <p class="subtitulo">Gerencie os quartos do hotel</p>
+            </div>
+            <button class="btn" onclick="abrirCadastroQuarto()">Novo Quarto</button>
+        </div>
+
+        <div class="card-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número do Quarto</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaQuartos">
+                </tbody>
+            </table>
+        </div>
+
+        <p class="rodape">2026 Hotel Reservas - Projeto Full Stack</p>
+    </main>
+
+    <div id="cadastroQuarto" class="fundo-modal oculto">
+        <div class="form-area">
+            <h2>Cadastro de Quarto</h2>
+            <p class="subtitulo">Informe os dados do novo quarto</p>
+
+            <form id="formQuarto">
+                <div class="campo">
+                    <label>Número do Quarto</label>
+                    <input type="number" id="numeroQuarto" placeholder="Ex: 101" required min="1">
+                </div>
+
+                <div class="campo">
+                    <label>Tipo do Quarto</label>
+                    <select id="tipoQuarto" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Luxo">Luxo</option>
+                        <option value="Suite">Suite</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
+                <button type="button" class="btn btn-secundario" onclick="fecharCadastroQuarto()">Voltar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalExcluirQuarto" class="fundo-modal oculto">
+        <div class="modal">
+            <h3>Excluir Quarto</h3>
+            <p>Deseja realmente excluir este quarto?</p>
+            <div class="acoes">
+                <button class="btn btn-secundario" onclick="fecharModalExcluirQuarto()">Cancelar</button>
+                <button class="btn btn-excluir" onclick="confirmarExclusaoQuarto()">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
