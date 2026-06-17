@@ -38,9 +38,9 @@ const excluir = async (req, res) => {
     } catch (error) {
         console.error("Erro ao excluir quarto:", error);
         if (error.code === 'P2003') {
-            return res.status(400).json({ error: "Não é possível excluir o quarto pois ele possui reservas associadas." });
+            return res.status(400).json({ error: "Erro ao excluir, quarto já reservado!" });
         }
-        return res.status(500).json({ error: "Erro interno do servidor ao excluir quarto." });
+        return res.status(500).json({ error: "Erro ao excluir quarto." });
     }
 };
 

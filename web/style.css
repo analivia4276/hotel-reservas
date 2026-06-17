@@ -8,12 +8,13 @@
 body {
     display: flex;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #f5f6fa;
 }
 
+/* SIDEBAR */
 .sidebar {
-    width: 220px;
-    background-color: #16213e;
+    width: 230px;
+    background-color: #1f2937;
     color: #fff;
     padding: 20px;
 }
@@ -32,7 +33,7 @@ body {
 }
 
 .menu li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .menu a {
@@ -40,22 +41,24 @@ body {
     padding: 10px;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .menu a:hover {
-    background-color: #452c5e;
+    background-color: #374151;
 }
 
 .menu a.ativo {
-    background-color: #8e1ed9;
+    background-color: #4f46e5;
 }
 
+/* CONTEÚDO */
 .conteudo {
     flex: 1;
     padding: 30px;
 }
 
+/* TOPO */
 .topo {
     display: flex;
     justify-content: space-between;
@@ -65,102 +68,99 @@ body {
 
 .topo h1 {
     font-size: 22px;
+    color: #111827;
 }
 
 .subtitulo {
-    color: #777;
+    color: #6b7280;
     font-size: 14px;
     margin-top: 5px;
 }
 
+/* BOTÕES */
 .btn {
-    padding: 10px 16px;
+    padding: 10px 14px;
     border: none;
-    border-radius: 5px;
-    background-color: #1ed0d9;
+    border-radius: 4px;
+    background-color: #4f46e5;
     color: #fff;
     cursor: pointer;
     font-size: 14px;
 }
 
 .btn:hover {
-    background-color: #16a5ad;
+    background-color: #4338ca;
 }
 
 .btn-secundario {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ccc;
+    background-color: #e5e7eb;
+    color: #111827;
 }
 
 .btn-secundario:hover {
-    background-color: #eee;
+    background-color: #d1d5db;
 }
 
 .btn-excluir {
-    background-color: #e63946;
+    background-color: #ef4444;
 }
 
 .btn-excluir:hover {
-    background-color: #c5303c;
+    background-color: #dc2626;
 }
 
-.card-area {
+/* CARD */
+.card-area, .form-area {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    margin-top: 15px;
 }
 
 .card-area h2 {
     margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-.card-area h2:first-child {
-    margin-top: 0;
+    margin-top: 15px;
+    font-size: 18px;
 }
 
 .card-area p {
     color: #555;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.card-area ul {
-    margin-left: 20px;
-    color: #555;
-    line-height: 1.8;
-}
-
+/* TABELA */
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: #fff;
+    margin-top: 10px;
 }
 
 th, td {
     text-align: left;
     padding: 12px;
-    border-bottom: 1px solid #00279b;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
 }
 
 th {
-    color: #555;
-    font-weight: bold;
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+tr:hover {
+    background-color: #f9fafb;
 }
 
 .acoes {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
+/* FORM */
 .form-area {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 30px;
     max-width: 500px;
-}
-
-.form-area h2 {
-    margin-bottom: 5px;
 }
 
 .campo {
@@ -171,71 +171,64 @@ th {
     display: block;
     margin-bottom: 5px;
     font-size: 14px;
-    color: #444;
+    color: #374151;
 }
 
 .campo input,
 .campo select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
     font-size: 14px;
 }
 
-.form-area .btn {
-    width: 100%;
-    margin-top: 20px;
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #4f46e5;
 }
 
-.form-area .btn-secundario {
-    margin-top: 10px;
-}
-
+/* MODAL */
 .fundo-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    width: 350px;
+    text-align: center;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #6b7280;
+}
+
+.modal .acoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .oculto {
     display: none;
 }
 
-.modal {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    width: 350px;
-    text-align: center;
-}
-
-.modal h3 {
-    margin-bottom: 10px;
-}
-
-.modal p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.modal .acoes {
-    justify-content: center;
-}
-
-.modal .btn {
-    flex: 1;
-}
-
+/* RODAPÉ */
 .rodape {
     text-align: center;
-    color: #999;
+    color: #9ca3af;
     font-size: 12px;
     margin-top: 30px;
 }

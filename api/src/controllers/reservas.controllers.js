@@ -39,7 +39,7 @@ const excluir = async (req, res) => {
         return res.status(200).json(reserva);
     } catch (error) {
         console.error("Erro ao excluir reserva:", error);
-        return res.status(500).json({ error: "Erro interno do servidor ao excluir reserva." });
+        return res.status(500).json({ error: "Erro ao excluir reserva." });
     }
 };
 
